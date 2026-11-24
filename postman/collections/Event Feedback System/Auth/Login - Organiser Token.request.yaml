@@ -1,17 +1,17 @@
 $kind: http-request
-url: "{{baseUrl}}/api/auth/login"
+url: '{{baseUrl}}/api/auth/login'
 method: POST
 body:
-  type: json
-  content: |-
-    {
-        "email": "organiser@example.com",
-        "password": "{{organiser_password}}"
-    }
+    type: json
+    content: |-
+        {
+            "email": "organiser@example.com",
+            "password": "{{organiser_password}}"
+        }
 scripts:
-  - type: afterResponse
-    code: |-
-      pm.test('returns 200', () => pm.response.to.have.status(200));
-      pm.collectionVariables.set('organiser_token', pm.response.json().token);
-    language: text/javascript
+    - type: afterResponse
+      code: |-
+          pm.test('returns 200', () => pm.response.to.have.status(200));
+          pm.collectionVariables.set('organiser_token', pm.response.json().token);
+      language: text/javascript
 order: 5808
