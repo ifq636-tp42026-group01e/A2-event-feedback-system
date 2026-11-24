@@ -1,5 +1,7 @@
 # Event Feedback System
 
+This repo covers assignment 2, and continues on from the work completed in the [Assignment 1 repo](https://github.com/xdaybreakerx/IFQ636-A1)
+
 ## Project Description
 
 The Event Feedback System is a MERN app where event organisers create events, and open them for feedback. Attendees then leave a rating, and comments on events they went to.
